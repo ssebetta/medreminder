@@ -2,7 +2,7 @@ import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
   appId: 'io.ionic.opdreminder',
-  appName: 'Med Reminder',
+  appName: 'OPD Reminder',
   webDir: 'www',
   server: {
     // androidScheme: 'https'

@@ -2,6 +2,6 @@
 <resources>
     <string name="app_name">medreminder</string>
     <string name="title_activity_main">medreminder</string>
-    <string name="package_name">io.ionic.starter</string>
-    <string name="custom_url_scheme">io.ionic.starter</string>
+    <string name="package_name">io.medreminder</string>
+    <string name="custom_url_scheme">io.medreminder</string>
 </resources>

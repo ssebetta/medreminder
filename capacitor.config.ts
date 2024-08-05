@@ -1,9 +1,13 @@
 import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
-  appName: 'medreminder',
+  appId: 'io.ionic.medreminder',
+  appName: 'Med Reminder',
   webDir: 'www',
+  server: {
+    // androidScheme: 'https'
+    androidScheme: 'http'
+  },
   plugins: {
     GoogleMaps: {
       apiKey: 'AIzaSyCQLlBBXjwA1sm-r4K44BDF2zj2DQLgduI'

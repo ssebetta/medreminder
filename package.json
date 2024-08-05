@@ -21,8 +21,9 @@
     "@angular/platform-browser": "^18.0.0",
     "@angular/platform-browser-dynamic": "^18.0.0",
     "@angular/router": "^18.0.0",
+    "@capacitor/android": "6.1.1",
     "@capacitor/app": "6.0.0",
-    "@capacitor/core": "6.1.1",
+    "@capacitor/core": "~6.1.0",
     "@capacitor/geolocation": "^6.0.0",
     "@capacitor/google-maps": "^5.4.1",
     "@capacitor/haptics": "6.0.0",
@@ -91,5 +92,8 @@
     "karma-jasmine-html-reporter": "~2.1.0",
     "typescript": "~5.4.0"
   },
-  "description": "An Ionic project"
+  "description": "An Ionic project",
+  "overrides": {
+    "@capacitor/core": "~6.1.0"
+  }
 }

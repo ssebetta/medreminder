@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">medreminder</string>
-    <string name="title_activity_main">medreminder</string>
-    <string name="package_name">io.medreminder</string>
-    <string name="custom_url_scheme">io.medreminder</string>
+    <string name="app_name">OPD Reminder App</string>
+    <string name="title_activity_main">OPD Reminder App</string>
+    <string name="package_name">io.ionic.opdreminder</string>
+    <string name="custom_url_scheme">io.ionic.opdreminder</string>
 </resources>

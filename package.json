@@ -1,5 +1,5 @@
 {
-  "name": "medreminder",
+  "name": "opdreminder",
   "version": "0.0.1",
   "author": "Ionic Framework",
   "homepage": "https://ionicframework.com/",
@@ -58,6 +58,7 @@
     "@types/estree": "^1.0.5",
     "@types/express": "^4.17.21",
     "@types/express-serve-static-core": "^4.19.5",
+    "@types/google.maps": "^3.55.12",
     "@types/http-errors": "^2.0.4",
     "@types/http-proxy": "^1.17.14",
     "@types/jasmine": "~5.1.0",

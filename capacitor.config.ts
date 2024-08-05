@@ -1,7 +1,7 @@
 import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.medreminder',
+  appId: 'io.ionic.opdreminder',
   appName: 'Med Reminder',
   webDir: 'www',
   server: {

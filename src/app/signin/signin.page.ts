@@ -80,6 +80,6 @@ export class SigninPage {
   logout()
   {
     this.authService.logout();
-    this.navCtrl.navigateRoot('/tabs/signin');
+    this.navCtrl.navigateRoot('/signin');
   }
 }

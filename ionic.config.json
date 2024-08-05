@@ -1,5 +1,5 @@
 {
-  "name": "medreminder",
+  "name": "OPD Reminder App",
   "integrations": {
     "capacitor": {}
   },

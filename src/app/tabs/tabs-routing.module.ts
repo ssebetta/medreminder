@@ -28,14 +28,6 @@ const routes: Routes = [
         loadChildren: () => import('../patient/patient.module').then(m => m.PatientPageModule)
       },
       {
-        path: 'signin',
-        loadChildren: () => import('../signin/signin.module').then( m => m.SigninPageModule)
-      },
-      {
-        path: 'signup',
-        loadChildren: () => import('../signup/signup.module').then( m => m.SignupPageModule)
-      },
-      {
         path: 'users',
         loadChildren: () => import('../users/users.module').then( m => m.UsersPageModule)
       },

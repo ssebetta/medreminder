@@ -1,4 +1,4 @@
-package io.ionic.medreminder;
+package io.ionic.opdreminder;
 
 import com.getcapacitor.BridgeActivity;
 

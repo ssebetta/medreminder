@@ -3,111 +3,15 @@
     <ion-buttons slot="start">
       <ion-menu-button color="light"></ion-menu-button>
     </ion-buttons>
-    <ion-title style="text-align: center;">MedReminder</ion-title>
+    <ion-title style="text-align: center;">Med Reminder</ion-title>
   </ion-toolbar>
 </ion-header>
-
-<!-- <ion-content color="">
-  <ion-row style="margin-top: 70px;">
-    <ion-col>
-      <a routerLink="/patient" style="text-decoration: none;">
-        <div no-margin margin-top class="tab">
-          <ion-icon name="medkit-outline" mode="ios"></ion-icon>
-          <div class="label">patient</div><br>
-        </div>
-      </a>
-    </ion-col>
-    <ion-col>
-      <a routerLink="/odometer" style="text-decoration: none;">
-        <div no-margin margin-top class="tab">
-          <ion-icon name="speedometer-outline" mode="ios"></ion-icon>
-          <div class="label">Odometer</div><br>
-        </div>
-      </a>
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col>
-      <a routerLink="/engine" style="text-decoration: none;">
-        <div no-margin margin-top class="tab">
-          <ion-icon name="cog-outline" mode="ios"></ion-icon>
-          <div class="label">Engine</div><br>
-        </div>
-      </a>
-    </ion-col>
-    <ion-col>
-     <a routerLink="/lights" style="text-decoration: none;">
-        <div no-margin margin-top class="tab">
-          <ion-icon name="sunny-outline" mode="ios"></ion-icon>
-          <div class="label">Lights</div><br>
-        </div>
-      </a>
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col>
-      <a routerLink="/body" style="text-decoration: none;">
-        <div no-margin margin-top class="tab">
-          <ion-icon name="car-outline" mode="ios"></ion-icon>
-          <div class="label">Body work</div><br>
-        </div>
-      </a>
-    </ion-col>
-    <ion-col>
-     <a routerLink="/tyres" style="text-decoration: none;">
-        <div no-margin margin-top class="tab">
-          <ion-icon name="server-outline" mode="ios"></ion-icon>
-          <div class="label">Tyres</div><br>
-        </div>
-      </a>
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col>
-     <a routerLink="/cabin" style="text-decoration: none;">
-        <div no-margin margin-top class="tab">
-          <ion-icon name="car-sport-outline" mode="ios"></ion-icon>
-          <div class="label">Driver Cabin</div><br>
-        </div>
-      </a>
-    </ion-col>
-    <ion-col>
-     <a routerLink="/brakes" style="text-decoration: none;">
-        <div no-margin margin-top class="tab">
-          <ion-icon name="warning-outline" mode="ios"></ion-icon>
-          <div class="label">Brakes</div><br>
-        </div>
-      </a>
-    </ion-col>
-    
-  </ion-row>
-  <ion-row>
-    <ion-col style="border: none !important;">
-     <a routerLink="/operations" style="text-decoration: none;">
-        <div no-margin margin-top class="tab">
-          <ion-icon name="briefcase-outline" mode="ios"></ion-icon>
-          <div class="label">General Operations</div><br>
-        </div>
-      </a>
-    </ion-col>
-    <ion-col style="border: none !important;">
-      <a routerLink="/mileage" style="text-decoration: none;">
-        <div no-margin margin-top class="tab">
-          <ion-icon name="scale-outline" mode="ios"></ion-icon>
-          <div class="label">Mileage</div><br>
-        </div>
-      </a>
-    </ion-col>
-  </ion-row>
-</ion-content> -->
-<!-- <ion-content>
-  <div id="map_canvas" style="height:100vh;"></div>
-</ion-content> -->
 <ion-content>
-  <div #map style="height:100vh;"></div>
-  <ion-list>
+  <div #map style="height:80vh; width: 100%;"></div>
+  <ion-button expand="block" (click)="getDirections()">Get Directions</ion-button>
+  <!-- <ion-list>
     <ion-item *ngFor="let pharmacy of pharmacies" (click)="showRoute(pharmacy)">
       {{ pharmacy.name }}
     </ion-item>
-  </ion-list>
+  </ion-list> -->
 </ion-content>

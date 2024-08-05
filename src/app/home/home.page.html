@@ -7,26 +7,26 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content color="">
+<!-- <ion-content color="">
   <ion-row style="margin-top: 70px;">
     <ion-col>
-      <a routerLink="/patients" style="text-decoration: none;">
+      <a routerLink="/patient" style="text-decoration: none;">
         <div no-margin margin-top class="tab">
           <ion-icon name="medkit-outline" mode="ios"></ion-icon>
-          <div class="label">Patients</div><br>
+          <div class="label">patient</div><br>
         </div>
       </a>
     </ion-col>
     <ion-col>
-      <a routerLink="/users" style="text-decoration: none;">
+      <a routerLink="/odometer" style="text-decoration: none;">
         <div no-margin margin-top class="tab">
-          <ion-icon name="people-outline" mode="ios"></ion-icon>
-          <div class="label">Users</div><br>
+          <ion-icon name="speedometer-outline" mode="ios"></ion-icon>
+          <div class="label">Odometer</div><br>
         </div>
       </a>
     </ion-col>
   </ion-row>
-  <!-- <ion-row>
+  <ion-row>
     <ion-col>
       <a routerLink="/engine" style="text-decoration: none;">
         <div no-margin margin-top class="tab">
@@ -43,8 +43,8 @@
         </div>
       </a>
     </ion-col>
-  </ion-row> -->
-  <!-- <ion-row>
+  </ion-row>
+  <ion-row>
     <ion-col>
       <a routerLink="/body" style="text-decoration: none;">
         <div no-margin margin-top class="tab">
@@ -61,8 +61,8 @@
         </div>
       </a>
     </ion-col>
-  </ion-row> -->
-  <!-- <ion-row>
+  </ion-row>
+  <ion-row>
     <ion-col>
      <a routerLink="/cabin" style="text-decoration: none;">
         <div no-margin margin-top class="tab">
@@ -80,8 +80,8 @@
       </a>
     </ion-col>
     
-  </ion-row> -->
-  <!-- <ion-row>
+  </ion-row>
+  <ion-row>
     <ion-col style="border: none !important;">
      <a routerLink="/operations" style="text-decoration: none;">
         <div no-margin margin-top class="tab">
@@ -98,5 +98,16 @@
         </div>
       </a>
     </ion-col>
-  </ion-row> -->
+  </ion-row>
+</ion-content> -->
+<!-- <ion-content>
+  <div id="map_canvas" style="height:100vh;"></div>
+</ion-content> -->
+<ion-content>
+  <div #map style="height:100vh;"></div>
+  <ion-list>
+    <ion-item *ngFor="let pharmacy of pharmacies" (click)="showRoute(pharmacy)">
+      {{ pharmacy.name }}
+    </ion-item>
+  </ion-list>
 </ion-content>

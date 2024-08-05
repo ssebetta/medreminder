@@ -1,0 +1,79 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="text-align: center;">Patients</ion-title>
+    <ion-progress-bar *ngIf="loading" type="indeterminate"></ion-progress-bar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content
+  [fullscreen]="true" 
+>
+  <ion-list>
+    <ion-item>
+      <ion-label>
+      <h3 slot="start">
+        Patient Id
+      </h3>
+      <p>
+        PI - {{patient.id}}
+      </p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+      <h3 slot="start">
+        Name
+      </h3>
+      <p>
+        {{patient.name}}
+      </p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+      <h3 slot="start">
+        Phone
+      </h3>
+      <p>
+        {{patient.phone}}
+      </p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <h3 slot="start">
+          Address
+        </h3>
+        <p>
+          {{ patient.Address }}
+        </p>
+      </ion-label>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>
+        <h3 slot="start">
+          Appointments (tap to remind)
+        </h3>
+        <p *ngIf="patient.appointments.length">
+          <span *ngFor="let item of patient.appointments">
+            <span (click)="remindAppointment(item, patient)" style="cursor: pointer;">{{item.date}}</span>
+          </span>
+        </p>
+      </ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>
+        <h3 slot="start">
+          Medications (tap to remind)
+        </h3>
+        <p *ngIf="patient.medications.length">
+          <span *ngFor="let item of patient.medications">
+            <span (click)="remindMedication(item, patient)" style="cursor: pointer;">{{item.name}} at {{item.time}}</span>
+          </span>
+        </p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

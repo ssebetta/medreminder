@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="text-align: center;">Patients</ion-title>
+    <ion-progress-bar *ngIf="loading" type="indeterminate"></ion-progress-bar>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+  <form #form="ngForm" (ngSubmit)="save(form)" method="post">
+    
+    <ion-item>
+      <ion-label position="stacked">First Name</ion-label>
+      <ion-input type="text" name="first_name" ngModel></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Last Name</ion-label>
+      <ion-input type="text" name="last_name" ngModel></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Age</ion-label>
+      <ion-input type="text" name="age" ngModel></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Gender</ion-label>
+      <ion-select interface="popover" name="gender" ngModel>
+        <ion-select-option value="Yes">Male</ion-select-option>
+        <ion-select-option value="No">Female</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Phone</ion-label>
+      <ion-input type="text" name="phone" ngModel></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Email (optional)</ion-label>
+      <ion-input type="text" name="email" ngModel></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">National ID / Passport No.</ion-label>
+      <ion-input type="text" name="document_number" ngModel></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Address</ion-label>
+      <ion-input type="text" name="address" ngModel></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Next of Kin</ion-label>
+      <ion-input type="text" name="next_of_kin" ngModel></ion-input>
+    </ion-item>
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="primary" expand="block">
+          <div class="spin" *ngIf="loading">
+            <ion-spinner name="bubbles"></ion-spinner>
+          </div>
+          <span *ngIf="!loading">
+            Save
+          </span>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>

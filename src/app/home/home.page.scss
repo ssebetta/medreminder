@@ -186,3 +186,13 @@ ion-item, ion-slide {
     }
   }
 }
+
+#map {
+  height: 70%;
+  width: 100%;
+}
+
+ion-list {
+  height: 30%;
+  overflow-y: auto;
+}

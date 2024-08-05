@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="text-align: center;">Users</ion-title>
+    <ion-progress-bar *ngIf="loading" type="indeterminate"></ion-progress-bar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <form #form="ngForm" (ngSubmit)="save(form)" method="post">
+    <div>
+      <h3 style="padding: 50px;"><b>User</b></h3><br>
+    </div>
+    
+    <ion-item>
+      <ion-label position="stacked">First Name</ion-label>
+      <ion-input type="text" name="first_name" required ngModel></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label position="stacked">Last Name</ion-label>
+      <ion-input type="text" name="last_name" required ngModel></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label position="stacked">Email</ion-label>
+      <ion-input type="email" name="email" required ngModel></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label position="stacked">Role</ion-label>
+      <ion-select interface="popover" name="role" required ngModel>
+        <ion-select-option value="regular">Regular</ion-select-option>
+        <!-- Only added by admin -->
+        <ion-select-option value="supervisor">Supervisor</ion-select-option>
+        <ion-select-option value="admin">Admin</ion-select-option>
+      </ion-select>
+    </ion-item>
+  
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="primary" expand="block">
+          <div class="spin" *ngIf="loading">
+            <ion-spinner name="bubbles"></ion-spinner>
+          </div>
+          <span *ngIf="!loading">
+            Save
+          </span>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+</form>
+</ion-content>

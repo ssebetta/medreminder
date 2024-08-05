@@ -20,15 +20,35 @@ const routes: Routes = [
         loadChildren: () => import('../tab3/tab3.module').then(m => m.Tab3PageModule)
       },
       {
+        path: 'home',
+        loadChildren: () => import('../home/home.module').then(m => m.HomePageModule)
+      },
+      {
+        path: 'patients',
+        loadChildren: () => import('../patient/patient.module').then(m => m.PatientPageModule)
+      },
+      {
+        path: 'signin',
+        loadChildren: () => import('../signin/signin.module').then( m => m.SigninPageModule)
+      },
+      {
+        path: 'signup',
+        loadChildren: () => import('../signup/signup.module').then( m => m.SignupPageModule)
+      },
+      {
+        path: 'users',
+        loadChildren: () => import('../users/users.module').then( m => m.UsersPageModule)
+      },
+      {
         path: '',
-        redirectTo: '/tabs/tab1',
+        redirectTo: '/tabs/home',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/tab1',
+    redirectTo: '/tabs/home',
     pathMatch: 'full'
   }
 ];

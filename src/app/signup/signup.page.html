@@ -1,0 +1,53 @@
+<ion-content style="text-align: center !important;">
+  <form #form="ngForm" (ngSubmit)="signup(form)" method="post">
+    <div>
+      <h3 style="padding: 50px;"><b>TransportMS</b></h3><br>
+    </div>
+
+    <ion-item lines="full">
+      <ion-label position="floating">First Name</ion-label>
+      <ion-input ngModel name="first_name" type="text" required style="border-bottom: 1px solid #300000"></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Last Name</ion-label>
+      <ion-input ngModel name="last_name" type="text" required style="border-bottom: 1px solid #300000"></ion-input>
+    </ion-item>
+
+    <ion-item lines="full" class="ion-inline">
+      <ion-label position="floating">Phone number</ion-label>
+      <ion-input ngModel type="text" name="phone"  placeholder="+256xxxxxxxxx" [value]="selectedCountry.country_code" required style="border-bottom: 1px solid #300000"></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input ngModel name="email" type="email" placeholder="optional" required style="border-bottom: 1px solid #300000"></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Password</ion-label>
+      <ion-input ngModel name="password" type="password" placeholder="" required style="border-bottom: 1px solid #300000"></ion-input>
+    </ion-item>
+
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="danger" expand="block">
+          <div class="spin" *ngIf="loading">
+            <ion-spinner name="bubbles"></ion-spinner>
+          </div>
+          <span *ngIf="!loading">
+            Get Started
+          </span>
+        </ion-button><br>
+        <a routerLink="/signin" class="small-text" style="color: #0000cc"> I already have an account</a><br><br>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>
+<ion-footer style="text-align: center !important;">
+  <ion-toolbar color="primary">
+    <div class="ion-align-items-center">
+      <label>By spethacom</label>
+    </div>
+  </ion-toolbar>
+</ion-footer>

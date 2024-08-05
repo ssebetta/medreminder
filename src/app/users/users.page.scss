@@ -1,0 +1,27 @@
+ion-toolbar .tabs {
+  overflow: auto;
+  white-space: nowrap;
+  display: flex;
+  justify-content: center;
+  .tab {
+    text-align: center;
+    width: calc(100% / 4);
+    color: #00cc00;
+    &.active {
+      color: #00cc00;
+    }
+    ion-icon {
+      font-size: 20px;
+      color: #fff;
+    }
+    .label {
+      font-size: 10px;
+      margin-top: -2px;
+      color: #fff;
+    }
+    
+  }}
+ion-toolbar .menu-scroll{ background-color: transparent;overflow: auto;white-space: nowrap;}
+ion-toolbar .menu-scroll a {display: inline-block;color: white;text-align: center;text-decoration: none;}
+ion-toolbar .menu-scroll a:hover{ background-color: transparent;color: #fff!important}
+ion-toolbar .menu-scroll .active{ background-color: #777;color: #fff!important}

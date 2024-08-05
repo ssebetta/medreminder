@@ -1,4 +1,3 @@
-/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
   "compileOnSave": false,
   "compilerOptions": {
@@ -22,7 +21,9 @@
       "es2018", 
       "dom"
     ],
-    "useDefineForClassFields": false
+    "useDefineForClassFields": false,
+    "typeRoots": ["node_modules/@types"],
+    "types": ["node", "body-parser", "bonjour", "connect", "connect-history-api-fallback", "cookie", "cors", "eslint", "eslint-scope", "estree", "express", "express-serve-static-core", "http-errors", "http-proxy", "jasmine", "json-schema", "mute-stream", "node-forge", "qs", "range-parser", "retry", "semver", "send", "serve-index", "serve-static", "sockjs", "ws"]
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

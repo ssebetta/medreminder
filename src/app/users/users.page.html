@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="text-align: center;">Users</ion-title>
+    <ion-progress-bar *ngIf="loading" type="indeterminate"></ion-progress-bar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="" padding style="margin-top: 5px;">
+    <div *ngIf="users else nousers">
+      <div>
+        <ion-list>
+          <ion-item>
+            Users Records
+          </ion-item>
+        </ion-list>
+        <ion-list *ngFor="let item of users" >
+          <ion-item (click)="view(item)" style="cursor: pointer;">
+            <ion-thumbnail style="border-radius: 50%; height: 50px; width: 50px; background-color: dodgerblue;" slot="start">
+              <p style="margin: 13px; color: white;">{{item.first_name.charAt(0)}}{{item.last_name.charAt(0)}}</p>
+            </ion-thumbnail>
+            <ion-label>
+              <h3 style="overflow: hidden; text-overflow: ellipsis; max-width: 100px;">
+                {{item.first_name}} {{item.last_name}}
+              </h3>
+              <p>
+                Added {{timeSince(item.created_at)}} ago
+              </p>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+      </div>
+      <ion-infinite-scroll (ionInfinite)="onIonInfinite($event)">
+        <ion-infinite-scroll-content></ion-infinite-scroll-content>
+      </ion-infinite-scroll>
+    </div>
+    <ng-template #nousers style="margin-top: 5px;">
+      No users records.
+    </ng-template>
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed" title="Service request">
+      <ion-fab-button color="primary" routerLink="/tabs/users/add">
+        <ion-icon name="add"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+</ion-content>

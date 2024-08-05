@@ -1,0 +1,34 @@
+export class Drivers {
+    first_name! :string
+    last_name! :string
+    phone! :string
+    email! :string
+    document! :string
+    passport_photo! :string
+    nationality! :string
+    place_of_birth! :string
+    title! :string
+    sex! :string
+    marital_status! :string
+    spouse! :string
+    children! :string
+    kin_first_name! :string
+    kin_last_name! :string
+    kin_relationship! :string
+    kin_phone! :string
+    kin_email! :string
+    other_phones! :string
+    zone! :string
+    parish! :string
+    subcounty! :string
+    landlord_name! :string
+    landlord_contact! :string
+    previous_workplace! :string
+    previous_work_details! :string
+    manager_name! :string
+    manager_position! :string
+    manager_department! :string
+    positions! :string
+    qualifications! :string
+    schools! :string
+}

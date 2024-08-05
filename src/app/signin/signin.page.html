@@ -1,7 +1,7 @@
 <div class="container" id="container">
   <div class="form-container sign-in-container">
 
-    <h2>TransportMs</h2>
+    <h2>Med Reminder</h2>
     <form #form="ngForm" (ngSubmit)="signin(form)" method="post">
       <h1>Sign in</h1>
       <input ngModel type="email" name="email" placeholder="Email" >
@@ -13,7 +13,7 @@
         </h1>
       </label>
 
-      <a href="http://silverms.com/forgot-password-page" class="link text-blue hover" style="color: dodgerblue">Forgot your password?</a>
+      <!-- <a href="http://silverms.com/forgot-password-page" class="link text-blue hover" style="color: dodgerblue">Forgot your password?</a> -->
       <button type="submit">
         <div class="spin" *ngIf="loading">
           <ion-spinner name="bubbles"></ion-spinner>

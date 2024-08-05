@@ -44,7 +44,7 @@ export class AddPage implements OnInit {
       	).subscribe(
         (data: any) => {
           if(data.success){
-            this.navCtrl.navigateRoot('/tabs/patient'); // Should navigate to my-foods page
+            this.navCtrl.navigateRoot('/tabs/patients'); // Should navigate to my-foods page
             this.loading = false
           } else {
             this.alertService.presentToast("Failed to add patient. Check details");;

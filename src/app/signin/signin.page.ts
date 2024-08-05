@@ -25,7 +25,7 @@ export class SigninPage {
 
   ionViewWillEnter() {
     if(localStorage.getItem('medrem_token')) {
-      this.navCtrl.navigateRoot('/home');
+      this.navCtrl.navigateRoot('/tabs/home');
     }
   // Verify if user is validated else take to verification page
   }
@@ -64,10 +64,10 @@ export class SigninPage {
 					localStorage.setItem('user_id', data.user.id)
 					localStorage.setItem('role', data.user.role)
 					localStorage.setItem('medrem_token', data.access_token)
-					this.navCtrl.navigateRoot('/home');
+					this.navCtrl.navigateRoot('/tabs/home');
 		      		this.alertService.presentToast("Logged in!");
               		window.location.reload();
-		        	this.navCtrl.navigateRoot('/home');
+		        	this.navCtrl.navigateRoot('/tabs/home');
 		        	this.loading = false;
 		      	}
 			},
@@ -80,6 +80,6 @@ export class SigninPage {
   logout()
   {
     this.authService.logout();
-    this.navCtrl.navigateRoot('/signin');
+    this.navCtrl.navigateRoot('/tabs/signin');
   }
 }

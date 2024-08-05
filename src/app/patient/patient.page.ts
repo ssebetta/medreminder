@@ -45,10 +45,10 @@ export class PatientPage implements OnInit {
       .subscribe(
         (data: any) => {
           if(data.success){
-            this.patients = data.patient.data
+            this.patients = data.patients.data
             this.loading = false
           } else {
-            this.alertService.presentToast("Failed to add record. Check details");;
+            this.alertService.presentToast("Failed to fetch records");;
             this.loading = false  
           }
         },
@@ -69,11 +69,11 @@ export class PatientPage implements OnInit {
 		.subscribe(
 			(data: any) => {
 				if(data.success) {
-					this.patients = this.patients.concat(data.patient.data);
-					this.currentPage = data.patient.current_page;
+					this.patients = this.patients.concat(data.patients.data);
+					this.currentPage = data.patients.current_page;
 					(ev as InfiniteScrollCustomEvent).target.complete();
 
-					if (this.currentPage === data.patient.last_page) {
+					if (this.currentPage === data.patients.last_page) {
 						(ev as InfiniteScrollCustomEvent).target.disabled = true;
 					}
 				} else {
@@ -95,7 +95,7 @@ export class PatientPage implements OnInit {
     // this.router.navigate(['/patient/view/' + item.id], {
     //   state: { object: JSON.stringify(item) }
     // });
-    this.router.navigateByUrl('/patient/view', { state: { object: item } });
+    this.router.navigateByUrl('/tabs/patients/view', { state: { object: item } });
   }
   
   timeSince(date: any) {

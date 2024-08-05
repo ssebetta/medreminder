@@ -54,9 +54,9 @@ export class HomePage implements OnInit {
 	pharmacies: Pharmacy[] = [];
 
 	ionViewWillEnter() {
-		// if(!localStorage.getItem('medreminder_token')) {
-		// 	this.navCtrl.navigateRoot('/signin');
-		// }
+		if(!localStorage.getItem('medrem_token')) {
+			this.navCtrl.navigateRoot('/tabs/signin');
+		}
 	}
 
 	ngOnInit() {

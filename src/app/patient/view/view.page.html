@@ -45,34 +45,63 @@
           Address
         </h3>
         <p>
-          {{ patient.Address }}
+          {{ patient.address }}
         </p>
       </ion-label>
     </ion-item>
     
+    <p slot="start" style="margin-left: 10px;">
+      Appointments (tap to remind)
+    </p>
+    <ion-button style="margin-left: 10px;" color="{{showAppointmentInput ? 'danger' : 'success'}}" (click)="toggleAppointmentInput()">
+      {{ showAppointmentInput ? 'Hide' : 'Add Appointment' }}
+    </ion-button>
+    <div *ngIf="showAppointmentInput">
+      <ion-label position="stacked">Date</ion-label>
+      <ion-input type="date" [(ngModel)]="appointmentDate"></ion-input>
+      <ion-button color="success" (click)="saveAppointment()">Save</ion-button>
+    </div><br>
     <ion-item>
       <ion-label>
-        <h3 slot="start">
-          Appointments (tap to remind)
-        </h3>
-        <p *ngIf="patient.appointments.length">
+        <p *ngIf="patient.appointments.length else noAppointments;">
           <span *ngFor="let item of patient.appointments">
             <span (click)="remindAppointment(item, patient)" style="cursor: pointer;">{{item.date}}</span>
           </span>
         </p>
+        <ng-template #noAppointments>
+          <p>
+            No Appointments
+          </p>
+        </ng-template>
       </ion-label>
     </ion-item>
 
+    <p slot="start" style="margin-left: 10px; margin-top: 10px;">
+      Medications (tap to remind)
+    </p>
+    <ion-button style="margin-left: 10px;" color="{{showMedicationInput ? 'danger' : 'success'}}" (click)="toggleMedicationInput()">
+      {{ showMedicationInput ? 'Hide' : 'Add Medication' }}
+    </ion-button>
+    <div *ngIf="showMedicationInput">
+      <ion-label position="stacked">Name</ion-label>
+      <ion-input type="text" [(ngModel)]="medicationName"></ion-input>
+      <br>
+      <ion-label position="stacked">Time</ion-label>
+      <ion-input type="time" [(ngModel)]="medicationTime"></ion-input>
+      <ion-button color="success" (click)="saveMedication()">Save</ion-button>
+    </div>
     <ion-item>
       <ion-label>
-        <h3 slot="start">
-          Medications (tap to remind)
-        </h3>
-        <p *ngIf="patient.medications.length">
+        <p *ngIf="patient.medications.length else noMeds;">
           <span *ngFor="let item of patient.medications">
             <span (click)="remindMedication(item, patient)" style="cursor: pointer;">{{item.name}} at {{item.time}}</span>
           </span>
         </p>
+        <ng-template #noMeds>
+          <p>
+            No Meds
+          </p>
+        </ng-template>
       </ion-label>
     </ion-item>
   </ion-list>

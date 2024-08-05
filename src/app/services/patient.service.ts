@@ -62,6 +62,19 @@ export class PatientService {
     )
   }
 
+  reminder(
+    form: any
+  ) {
+    return this.http.post(this.env.API_URL + 'reminder',
+      form,
+      {
+        headers: new HttpHeaders({
+          'Authorization': `${localStorage.getItem('medrem_token')}`
+        })
+      }
+    )
+  }
+
   fetch(currentPage: number) {
     return this.http.get<Patient>(this.env.API_URL + 'patients?page=' + currentPage, this.httpOptions)
   }

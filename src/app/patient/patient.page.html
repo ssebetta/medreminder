@@ -16,17 +16,17 @@
         <ion-list *ngFor="let item of patients" >
           <ion-item (click)="view(item)" style="cursor: pointer;">
             <ion-thumbnail style="border-radius: 50%; height: 50px; width: 50px; background-color: #62bb51;" slot="start">
-              <p style="margin: 13px; color: white;">{{item.patient.name.split(' ')[0].charAt(0)}}{{item.patient.name.split(' ')[1].charAt(0)}}</p>
+              <p style="margin: 13px; color: white;">{{item.name.split(' ')[0].charAt(0)}}{{item.name.split(' ')[1].charAt(0)}}</p>
             </ion-thumbnail>
             <ion-label>
-              <h3>
-                {{item.id}} 
+              <h3 style="overflow: hidden; text-overflow: ellipsis; max-width: 100px;">
+                {{item.name}}
               </h3>
-              <p style="overflow: hidden; text-overflow: ellipsis; max-width: 100px;">
-                {{item.patient.name}}
+              <p>
+                PI-{{item.id}} 
               </p>
               <p>
-                {{timeSince(item.created_at)}} ago
+                Added {{timeSince(item.created_at)}} ago
               </p>
             </ion-label>
           </ion-item>
